@@ -13,7 +13,7 @@ COPY src ./src
 # copy data folder
 COPY data ./data
 
-# build project
+# build project DSkipTests for skip tests
 RUN mvn package -DskipTests
 
 # run application
