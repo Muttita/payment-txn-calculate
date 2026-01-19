@@ -4,11 +4,11 @@ import java.util.List;
 
 public class PaymentTxnCalculator {
 
-    public static boolean isValid(List<Double> paymentAmounts){
+    private static boolean isInvalid(List<Double> paymentAmounts){
         return paymentAmounts == null || paymentAmounts.isEmpty();
     }
     public static double calculateMin(List<Double> paymentAmounts) {
-        if (isValid(paymentAmounts)) {
+        if (isInvalid(paymentAmounts)) {
             return 0.0;
         }
 
@@ -22,7 +22,7 @@ public class PaymentTxnCalculator {
     }
 
     public static double calculateMax(List<Double> paymentAmounts){
-        if (isValid(paymentAmounts)){
+        if (isInvalid(paymentAmounts)){
             return 0.0;
         }
 
@@ -36,7 +36,7 @@ public class PaymentTxnCalculator {
     }
 
     public static double calculateAvg(List<Double> paymentAmounts){
-        if (isValid(paymentAmounts)){
+        if (isInvalid(paymentAmounts)){
             return 0.0;
         }
 
