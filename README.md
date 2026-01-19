@@ -125,5 +125,5 @@ If no valid payment records are found, all calculated values will be `0.0`
 - The first row is a header.
 - Payment amount column position is fixed.
 - Invalid records should be skipped.
-- Currency values are not converted; calculations are performed assuming the same currency.
+- Currency values are not converted, calculations are performed assuming the same currency.
 - Results are displayed in the console output.
