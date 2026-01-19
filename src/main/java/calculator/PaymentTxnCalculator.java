@@ -12,7 +12,7 @@ public class PaymentTxnCalculator {
             return 0.0;
         }
 
-        double min = paymentAmounts.get(0);
+        double min = paymentAmounts.getFirst();
         for (double amount : paymentAmounts) {
             if (amount < min) {
                 min = amount;
@@ -26,7 +26,7 @@ public class PaymentTxnCalculator {
             return 0.0;
         }
 
-        double max = paymentAmounts.get(0);
+        double max = paymentAmounts.getFirst();
         for (double amount : paymentAmounts){
             if(amount > max){
                 max = amount;

@@ -15,6 +15,7 @@ public class PaymentTxnReader {
             boolean isHeader = true;
 
             while ((line = br.readLine()) != null){
+                //check if the line is header
                 if (isHeader){
                     isHeader = false;
                     continue;
@@ -22,7 +23,7 @@ public class PaymentTxnReader {
 
                 String[] columns = line.split(",");
                 try {
-                    double amount = Double.parseDouble(columns[1]);
+                    double amount = Double.parseDouble(columns[1].trim());
                     paymentAmounts.add(amount);
                 }catch (NumberFormatException | ArrayIndexOutOfBoundsException e){
                     System.err.println("Skip invalid record: "+ line);

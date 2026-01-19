@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args){
-        String filePath = "data/payments.csv";
+        String filePath = args.length > 0 ? args[0] : "data/payments.csv";
 
         List<Double> paymentAmounts = PaymentTxnReader.readPaymentAmount(filePath);
 
